@@ -67,7 +67,7 @@
 
     .container {
       background: white;
-      padding: 50px 40px;
+      padding: 60px 80px;
       border-radius: 24px;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
       max-width: 800px;
@@ -98,34 +98,30 @@
     .container h1 {
       text-align: center;
       margin-top: 0;
-      font-size: 40px;
+      font-size: 60px;
       color: #003366;
     }
 
     .smart-item {
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
 
     .smart-item span {
       display: block;
       font-weight: bold;
-      font-size: 28px;
+      font-size: 50px;
       margin-bottom: 8px;
       color: #003366;
     }
 
     .smart-item p {
       margin: 0;
-      font-size: 22px;
+      font-size: 20px;
       color: #333;
     }
   </style>
 </head>
 <body>
-  <button onclick="fullscreen(facebox)">Full Screen</button>
-  <button onclick="sidescreen(facebox)">Side Screen?</button>
-  <br>
-  <br>
   <div class="container2" id="facebox">
   <div class="face">
     <div class="eye left" id="eyeLeft"></div>
@@ -162,6 +158,7 @@
     }
 
     window.onload = () => {
+      sidescreen(facebox);
       randomBlink();
     };
 
@@ -191,23 +188,18 @@
       <h1>SMART Goals</h1>
       <div class="smart-item">
         <span>S – Specific</span>
-        <p>Be clear and specific about what you want to achieve.</p>
       </div>
       <div class="smart-item">
         <span>M – Measurable</span>
-        <p>Track your progress and know when you've met your goal.</p>
       </div>
       <div class="smart-item">
         <span>A – Achievable</span>
-        <p>Set a goal that is realistic and attainable for you.</p>
       </div>
       <div class="smart-item">
         <span>R – Relevant</span>
-        <p>Ensure the goal is important and meaningful to you.</p>
       </div>
       <div class="smart-item">
         <span>T – Time-bound</span>
-        <p>Set a deadline to stay focused and motivated.</p>
       </div>
     </div>
   </div>
