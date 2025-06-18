@@ -9,7 +9,7 @@
       margin: 0;
       padding: 0;
       width: 100%;
-      background-color: #cce0ff;
+      background-color: #002447;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -90,6 +90,11 @@
       box-sizing: border-box;
     }
     
+    .fullscreen {
+      width: 100%;
+      height: 100%;
+    }
+    
     .container h1 {
       text-align: center;
       margin-top: 0;
@@ -117,7 +122,11 @@
   </style>
 </head>
 <body>
-  <div class="container2">
+  <button onclick="fullscreen(facebox)">Full Screen</button>
+  <button onclick="sidescreen(facebox)">Side Screen?</button>
+  <br>
+  <br>
+  <div class="container2" id="facebox">
   <div class="face">
     <div class="eye left" id="eyeLeft"></div>
     <div class="eye right" id="eyeRight"></div>
@@ -136,7 +145,7 @@
         {transform: 'scaleY(0.2)'},
         {transform: 'scaleY(1)'}
       ], {
-        duration: 250,
+        duration: 200,
         easing: 'ease-in-out'
       });
     }
@@ -155,7 +164,28 @@
     window.onload = () => {
       randomBlink();
     };
+
+    function fullscreen(facebox) {
+      facebox.animate([
+        {transform: 'scale(1)'},
+        {transform: 'scale(4)'},
+      ], {
+        duration: 400,
+        easing: 'ease-in-out'
+      }); 
+    }
+    
+    function sidescreen(facebox) {
+      facebox.animate([
+        {transform: 'scale(4)'},
+        {transform: 'scale(1)'},
+      ], {
+        duration: 400,
+        easing: 'ease-in-out'
+      }); 
+    }  
   </script>
+  
   <div class="fullscreen-wrapper">
     <div class="container">
       <h1>SMART Goals</h1>
